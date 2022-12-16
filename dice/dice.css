@@ -8,7 +8,7 @@
 .center_field * {
     position: relative;
     font-family: Trebuchet MS;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 5px 15px;
 }
 
@@ -28,14 +28,14 @@
     font-size: 32pt;
     word-spacing: 0.5em;
     padding: 5px 15px;
-    color: rgba(21, 26, 26, 0.6);
+    color: rgba(21, 26, 26, 0.75);
     top: 45%;
 }
 
 #labelhelp {
     font-size: 12pt;
     padding: 5px 15px;
-    color: rgba(21, 26, 26, 0.5);
+    color: rgba(21, 26, 26, 0.75);
     bottom: 50px;
 }
 
@@ -43,26 +43,37 @@
     text-align: center;
     font-size: 26pt;
     border: none;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 1);
     background-color: rgba(255, 255, 255, 0);
     top: 60%;
 }
 
 #sethelp {
+    max-width: 600px;
+    margin: 0 auto;
     font-size: 12pt;
-    color: rgba(21, 26, 26, 0.5);
+    color: rgba(21, 26, 26, 1);
     background: none;
     top: 25%;
+    text-align: left;
+}
+
+#sethelp div {
+    background: none;
 }
 
 #selector_div button {
     font-size: 20pt;
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(54, 96, 112, 1);
     cursor: pointer;
     border: none;
     width: 5em;
     top: 62%;
+}
+
+#selector_div button#clear {
+    background-color: rgba(90, 93, 94, 1);
 }
 
 .dice_place {
