@@ -1,7 +1,9 @@
 # Online 3D Dice Roller
 ## Roll some dice here: https://gclaunch.github.io/Online-3D-Dice-Roller/
-* Add modifiers by typing your desired notation and including `+` or `-` with your number. For example: `2d6 + 10` will add `10` to the output.
-* Fudge rolls by typing your desired notation and including `@` with desired results. For example: `4d4 @ 1 1 1 1` will output all `d4` dice values to be `1`.
+* Add modifiers by typing your desired notation and including `+` or `-` with your number.
+  * Example: `2d6 + 10` will add `10` to the output.
+* Fudge rolls by typing your desired notation and including `@` with desired results.
+  * Example: `4d4 @ 1 1 1 1` will output all `d4` dice values to be `1`.
 
 Set up a pre-roller with query strings:
 * Auto-set notation: https://gclaunch.github.io/Online-3D-Dice-Roller/dice/?notation=4d6
