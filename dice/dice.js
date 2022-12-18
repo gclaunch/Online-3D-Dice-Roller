@@ -781,10 +781,9 @@
     this.dice_box.prototype.bind_mouse = function(container, notation_getter, before_roll, after_roll) {
         var box = this;
         $t.bind(container, ['mousedown', 'touchstart'], function(ev) {
-            ev.preventDefault();
             box.mouse_time = (new Date()).getTime();
             box.mouse_start = $t.get_mouse_coords(ev);
-        });
+        }, {passive:false});
         $t.bind(container, ['mouseup', 'touchend'], function(ev) {
             if (box.rolling) return;
             if (box.mouse_start == undefined) return;

@@ -86,19 +86,39 @@ function dice_initialize(container) {
     box.bind_mouse(container, notation_getter, before_roll, after_roll);
     box.bind_throw($t.id('throw'), notation_getter, before_roll, after_roll);
 
+    var handled = false;
     $t.bind(container, ['mouseup', 'touchend'], function(ev) {
         ev.stopPropagation();
-        if (selector_div.style.display == 'none') {
-            if (!box.rolling) show_selector();
-            box.rolling = false;
-            return;
-        }
-        var name = box.search_dice_by_mouse(ev);
-        if (name != undefined) {
-            var notation = $t.dice.parse_notation(set.value);
-            notation.set.push(name);
-            set.value = $t.dice.stringify_notation(notation);
-            on_set_change();
+
+        if (ev.type == "touchend") {
+            handled = true;
+            if (selector_div.style.display == 'none') {
+                if (!box.rolling) show_selector();
+                box.rolling = false;
+                return;
+            }
+            var name = box.search_dice_by_mouse(ev);
+            if (name != undefined) {
+                var notation = $t.dice.parse_notation(set.value);
+                notation.set.push(name);
+                set.value = $t.dice.stringify_notation(notation);
+                on_set_change();
+            }
+        } else if (ev.type == "mouseup" && !handled) {
+            if (selector_div.style.display == 'none') {
+                if (!box.rolling) show_selector();
+                box.rolling = false;
+                return;
+            }
+            var name = box.search_dice_by_mouse(ev);
+            if (name != undefined) {
+                var notation = $t.dice.parse_notation(set.value);
+                notation.set.push(name);
+                set.value = $t.dice.stringify_notation(notation);
+                on_set_change();
+            }
+        } else {
+            handled = false;
         }
     });
 

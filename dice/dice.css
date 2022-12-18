@@ -65,15 +65,16 @@
 #selector_div button {
     font-size: 20pt;
     color: rgb(255, 255, 255);
-    background-color: rgba(54, 96, 112, 1);
+    background-color: rgba(90, 93, 94, 1);
     cursor: pointer;
     border: none;
     width: 5em;
     top: 62%;
 }
 
-#selector_div button#clear {
-    background-color: rgba(90, 93, 94, 1);
+#selector_div button#throw {
+    margin-left: 0.6em;
+    background-color: rgba(23, 124, 163, 1);
 }
 
 .dice_place {
