@@ -77,7 +77,7 @@ function dice_initialize(container) {
             if (notation.constant > 0) res += ' +' + notation.constant;
             else res += ' -' + Math.abs(notation.constant);
         }
-        if (result.length > 1) res += ' = ' + 
+        if (result.length > 0) res += ' = ' + 
                 (result.reduce(function(s, a) { return s + a; }) + notation.constant);
         label.innerHTML = res;
         info_div.style.display = 'inline-block';
