@@ -270,13 +270,13 @@
     }
 
     this.material_options = {
-        specular: 0x172022,
-        color: 0xf0f0f0,
-        shininess: 40,
+        specular: 0xa80000,
+        color: 0xffffff,
+        shininess: 5,
         shading: THREE.FlatShading,
     };
-    this.label_color = '#aaaaaa';
-    this.dice_color = '#202020';
+    this.label_color = '#ffffff';
+    this.dice_color = '#090909';
     this.ambient_light_color = 0xf0f5fb;
     this.spot_light_color = 0xefdfd5;
     this.selector_back_colors = { color: 0x404040, shininess: 0, emissive: 0x858787 };
@@ -284,8 +284,7 @@
     this.use_shadows = true;
 
     this.known_types = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100'];
-    this.dice_face_range = { 'd4': [1, 4], 'd6': [1, 6], 'd8': [1, 8], 'd10': [0, 9], 
-        'd12': [1, 12], 'd20': [1, 20], 'd100': [0, 9] };
+    this.dice_face_range = { 'd4': [1, 4], 'd6': [1, 6], 'd8': [1, 8], 'd10': [0, 9], 'd12': [1, 12], 'd20': [1, 20], 'd100': [0, 9] };
     this.dice_mass = { 'd4': 300, 'd6': 300, 'd8': 340, 'd10': 350, 'd12': 350, 'd20': 400, 'd100': 350 };
     this.dice_inertia = { 'd4': 5, 'd6': 13, 'd8': 10, 'd10': 9, 'd12': 8, 'd20': 6, 'd100': 9 };
 
